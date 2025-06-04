@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2ecc71;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormConroller">
+   <children>
+      <Label layoutX="208.0" layoutY="14.0" text="Clothiyfy Store">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="208.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnAddOnAction" text="Add" />
+      <TextField fx:id="txtName" layoutX="24.0" layoutY="107.0" text="Customer Name" />
+      <TextField fx:id="txtAddress" layoutX="24.0" layoutY="145.0" text="Customer Address" />
+      <TextField fx:id="txtPhone" layoutX="24.0" layoutY="187.0" text="Customer Phone" />
+      <TableView fx:id="txtTable" layoutX="52.0" layoutY="230.0" prefHeight="142.0" prefWidth="387.0">
+        <columns>
+          <TableColumn fx:id="colName" prefWidth="121.33331298828125" text="Name" />
+          <TableColumn fx:id="colAddress" prefWidth="144.6666259765625" text="Address" />
+            <TableColumn fx:id="colPhone" prefWidth="120.66668701171875" text="Phone" />
+        </columns>
+      </TableView>
+      <Button layoutX="453.0" layoutY="346.0" mnemonicParsing="false" onAction="#btnReloadOnAction" text="Reload" />
+   </children>
+</AnchorPane>
