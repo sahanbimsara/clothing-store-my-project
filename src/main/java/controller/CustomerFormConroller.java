@@ -5,6 +5,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -15,13 +16,15 @@ import service.CustomerServiceImpl;
 import service.CustomerService;
 import util.CrudUtil;
 
+import java.net.URL;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class CustomerFormConroller {
+public class CustomerFormConroller  implements Initializable {
 
     @FXML
     private TableColumn colAddress;
@@ -50,7 +53,22 @@ public class CustomerFormConroller {
     @FXML
     private TableView txtTable;
 
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        colID.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+        colPhone.setCellValueFactory(new PropertyValueFactory<>("phone"));
+
+        loadTable();
+
+    }
+
+
     List<Customer> customerList = new ArrayList<>();
+
+
 
 
     @FXML         // ADD CUSTOMER TO TABLE & SEND TO MYSQL DATABASE  => CrudUtil package
@@ -111,5 +129,6 @@ public class CustomerFormConroller {
         }
 
     }
+
 
 }
