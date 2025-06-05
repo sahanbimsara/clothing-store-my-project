@@ -11,9 +11,10 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Customer;
+import service.CustomerServiceImpl;
+import service.CustomerService;
 import util.CrudUtil;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -52,7 +53,7 @@ public class CustomerFormConroller {
     List<Customer> customerList = new ArrayList<>();
 
 
-    @FXML
+    @FXML         // ADD CUSTOMER TO TABLE & SEND TO MYSQL DATABASE
     void btnAddOnAction(ActionEvent event) {
         try {
 
@@ -74,8 +75,9 @@ public class CustomerFormConroller {
             throw new RuntimeException(e);
         }
 
-
     }
+
+        // RELOAD TABLE DATA
 
     @FXML
     void btnReloadOnAction(ActionEvent event) {
@@ -83,18 +85,15 @@ public class CustomerFormConroller {
 
     }
 
+        //LOAD DATA TO TABLE & SHOW DATA IN TABLE
+
     private void loadTable(){
 
         try {
 
-            ResultSet resultSet = CrudUtil.execute("SELECT * FROM customers");
-            while (resultSet.next())
-                customerList.add(new Customer(
-                        resultSet.getString(1),
-                        resultSet.getString(2),
-                        resultSet.getString(3),
-                        resultSet.getString(4)
-                ));
+            CustomerService service = new CustomerServiceImpl();
+            List<Customer> all = service.getAll();
+
 
             colID.setCellValueFactory(new PropertyValueFactory<>("id"));
             colName.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -102,7 +101,7 @@ public class CustomerFormConroller {
             colPhone.setCellValueFactory(new PropertyValueFactory<>("phone"));
 
             ObservableList<Customer> customerObservableList = FXCollections.observableArrayList();
-            customerList.forEach(customer -> {
+            all.forEach(customer -> {
                 customerObservableList.add(customer);
             });
             txtTable.setItems(customerObservableList);
