@@ -53,7 +53,7 @@ public class CustomerFormConroller {
     List<Customer> customerList = new ArrayList<>();
 
 
-    @FXML         // ADD CUSTOMER TO TABLE & SEND TO MYSQL DATABASE
+    @FXML         // ADD CUSTOMER TO TABLE & SEND TO MYSQL DATABASE  => CrudUtil package
     void btnAddOnAction(ActionEvent event) {
         try {
 
@@ -85,7 +85,7 @@ public class CustomerFormConroller {
 
     }
 
-        //LOAD DATA TO TABLE & SHOW DATA IN TABLE
+        //LOAD DATA TO TABLE & SHOW DATA IN TABLE => CrudUtil package
 
     private void loadTable(){
 
