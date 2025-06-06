@@ -47,6 +47,8 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer searchById(String id) {
+       // CrudUtil.execute("select * from customers");
+
         return null;
     }
 }

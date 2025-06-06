@@ -74,6 +74,15 @@ public class CustomerFormConroller  implements Initializable {
     @FXML         // ADD CUSTOMER TO TABLE & SEND TO MYSQL DATABASE  => CrudUtil package
     void btnAddOnAction(ActionEvent event) {
         try {
+            String id = txtId.getText();
+            String name = txtName.getText();
+            String address = txtAddress.getText();
+            String phone = txtPhone.getText();
+
+            if (id.isEmpty() || name.isEmpty() || address.isEmpty() || phone.isEmpty()){
+                new Alert(Alert.AlertType.WARNING,"Please Fill All Fields").show();
+                return;
+            }
 
             ResultSet resultSet = CrudUtil.execute("SELECT * FROM customers");
 
