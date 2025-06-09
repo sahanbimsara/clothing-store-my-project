@@ -1,4 +1,4 @@
-package service.custom.impl;
+package service.custom;
 
 public class CustomerServiceImpl {
 }

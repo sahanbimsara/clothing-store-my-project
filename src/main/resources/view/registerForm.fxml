@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="394.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.RegisterFormController">
+   <children>
+      <ImageView fitHeight="400.0" fitWidth="620.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/register-background.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="178.0" layoutY="20.0" text="𝚁𝚎𝚐𝚒𝚜𝚝𝚎𝚛 𝙵𝚘𝚛𝚖">
+         <font>
+            <Font name="Candara Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUserName" layoutX="178.0" layoutY="112.0" promptText="username" />
+      <TextField fx:id="txtPassword" layoutX="178.0" layoutY="197.0" promptText="password" />
+      <TextField fx:id="txtEmail" layoutX="178.0" layoutY="157.0" promptText="email" />
+      <TextField fx:id="txtConfirmPassword" layoutX="178.0" layoutY="237.0" promptText="confirm password" />
+      <Button layoutX="216.0" layoutY="302.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" style="-fx-background-color: #2ecc71;" text="Register" />
+      <Label layoutX="102.0" layoutY="116.0" text="username :" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="161.0" text="email" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="201.0" text="password" textFill="WHITE" />
+      <Label layoutX="102.0" layoutY="241.0" text="confirm" textFill="WHITE" />
+   </children>
+</AnchorPane>
