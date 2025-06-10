@@ -28,38 +28,52 @@ public class RegisterFormController {
     private TextField txtUserName;
 
     @FXML
-    void btnRegisterOnAction(ActionEvent event) throws SQLException {
+    void btnRegisterOnAction(ActionEvent event){
         String SQL = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
 
         if (txtPassword.getText().equals(txtConfirmPassword.getText())) {
 
-            Connection connection = DBConnection.getInstance().getConnection();
+            Connection connection = null;
+            try {
+                connection = DBConnection.getInstance().getConnection();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
 
-            ResultSet resultSet = connection.createStatement().executeQuery(
-                    "SELECT * FROM users WHERE email = '" + txtEmail.getText() + "'"
-            );
-
-            if (!resultSet.next()) {
-
-                User user = new User(
-                        txtUserName.getText(),
-                        txtEmail.getText(),
-                        txtPassword.getText()
+            ResultSet resultSet = null;
+            try {
+                resultSet = connection.createStatement().executeQuery(
+                        "SELECT * FROM users WHERE email = '" + txtEmail.getText() + "'"
                 );
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
 
-                PreparedStatement psTm = connection.prepareStatement(SQL);
-                psTm.setString(1, user.getUserName());
-                psTm.setString(2, user.getEmail());
-                psTm.setString(3, user.getPassword());
+            try {
+                if (!resultSet.next()) {
 
-                if (psTm.executeUpdate() > 0) {
-                    new Alert(Alert.AlertType.INFORMATION, "User Registered Successfully!").show();
+                    User user = new User(
+                            txtUserName.getText(),
+                            txtEmail.getText(),
+                            txtPassword.getText()
+                    );
+
+                    PreparedStatement psTm = connection.prepareStatement(SQL);
+                    psTm.setString(1, user.getUserName());
+                    psTm.setString(2, user.getEmail());
+                    psTm.setString(3, user.getPassword());
+
+                    if (psTm.executeUpdate() > 0) {
+                        new Alert(Alert.AlertType.INFORMATION, "User Registered Successfully!").show();
+                    } else {
+                        new Alert(Alert.AlertType.ERROR, "Registration Failed!").show();
+                    }
+
                 } else {
-                    new Alert(Alert.AlertType.ERROR, "Registration Failed!").show();
+                    new Alert(Alert.AlertType.ERROR, "User with this email already exists.").show();
                 }
-
-            } else {
-                new Alert(Alert.AlertType.ERROR, "User with this email already exists.").show();
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
             }
 
         } else {

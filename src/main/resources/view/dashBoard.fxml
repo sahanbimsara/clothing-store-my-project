@@ -3,6 +3,8 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -18,10 +20,25 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Label>
-      <Button layoutX="24.0" layoutY="98.0" mnemonicParsing="false" onAction="#btnTest" prefHeight="55.0" prefWidth="131.0" stylesheets="@../css/style.css" text="Reg Form" />
-      <Button layoutX="32.0" layoutY="172.0" mnemonicParsing="false" onAction="#btnlog" prefHeight="55.0" prefWidth="131.0" stylesheets="@../css/style.css" text="log" />
-      <Button layoutX="24.0" layoutY="240.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="131.0" stylesheets="@../css/style.css" text="Button" />
-      <Button layoutX="32.0" layoutY="314.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="131.0" stylesheets="@../css/style.css" text="Button" />
-      <AnchorPane fx:id="loadPane" layoutX="168.0" prefHeight="394.0" prefWidth="600.0" />
+      <Button layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnTest" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Reg Form" />
+      <Button layoutX="25.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnlog" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="log" />
+      <Button layoutX="25.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="DashBoard" />
+      <Button layoutX="25.0" layoutY="231.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Button" />
+      <AnchorPane fx:id="loadPane" layoutX="164.0" layoutY="3.0" prefHeight="394.0" prefWidth="600.0" />
+      <ImageView fitHeight="22.0" fitWidth="38.0" layoutX="31.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-dashboard-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="31.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-user-50.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="31.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-login-50.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
