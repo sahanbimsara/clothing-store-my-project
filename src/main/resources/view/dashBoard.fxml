@@ -40,5 +40,7 @@
             <Image url="@../img/icons8-login-50.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblDate" layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="115.0" text="Date - dd : mm : yyyy" />
+      <Label fx:id="lblTime" layoutX="17.0" layoutY="337.0" prefHeight="17.0" prefWidth="115.0" text="Time -  00: 00 : 00 " />
    </children>
 </AnchorPane>
