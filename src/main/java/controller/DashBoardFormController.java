@@ -32,6 +32,12 @@ public class DashBoardFormController implements Initializable {
     @FXML
     public Label lblTime;
 
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        loadDateAndTime();
+    }
+
     @FXML
     void btnTest(ActionEvent event) throws IOException {
         URL recource = this.getClass().getResource("/view/registerForm.fxml");
@@ -85,8 +91,5 @@ public class DashBoardFormController implements Initializable {
     }
 
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-        loadDateAndTime();
-    }
+
 }
