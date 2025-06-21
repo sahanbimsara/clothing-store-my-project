@@ -23,7 +23,7 @@
       <Button layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnTest" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Reg Form" />
       <Button layoutX="25.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnlog" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="log" />
       <Button layoutX="25.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="DashBoard" />
-      <Button layoutX="25.0" layoutY="231.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Button" />
+      <Button layoutX="25.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Button" />
       <AnchorPane fx:id="loadPane" layoutX="164.0" layoutY="3.0" prefHeight="394.0" prefWidth="600.0" />
       <ImageView fitHeight="22.0" fitWidth="38.0" layoutX="31.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
          <image>
