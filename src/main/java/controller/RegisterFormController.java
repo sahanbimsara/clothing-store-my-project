@@ -6,7 +6,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import model.User;
-import util.CrudUtil;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -52,10 +51,10 @@ public class RegisterFormController {
             try {
                 if (!resultSet.next()) {
 
-                    User user = new User(
+                   User user = new User(
                             txtUserName.getText(),
                             txtEmail.getText(),
-                            txtPassword.getText()
+                           txtPassword.getText()
                     );
 
                     PreparedStatement psTm = connection.prepareStatement(SQL);
