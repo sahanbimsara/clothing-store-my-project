@@ -30,11 +30,11 @@ public class RegisterFormController {
     @FXML
     void btnRegisterOnAction(ActionEvent event){
 
-        String key = "#1234";
+    //    String key = "#1234";
 
-        BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
+    //    BasicTextEncryptor basicTextEncryptor = new BasicTextEncryptor();
 
-        basicTextEncryptor.setPassword(key);
+    //    basicTextEncryptor.setPassword(key);
 
 
         String SQL = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
@@ -69,7 +69,7 @@ public class RegisterFormController {
                     PreparedStatement psTm = connection.prepareStatement(SQL);
                     psTm.setString(1, user.getUserName());
                     psTm.setString(2, user.getEmail());
-                    psTm.setString(3,basicTextEncryptor.encrypt(user.getPassword()));
+                    psTm.setString(3, user.getPassword());
 
                     if (psTm.executeUpdate() > 0) {
                         new Alert(Alert.AlertType.INFORMATION, "User Registered Successfully!").show();

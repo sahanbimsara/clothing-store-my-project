@@ -47,7 +47,7 @@ public class LoginFormController {
                    resultSet.getString(4)
             );
 
-           if (basicTextEncryptor.decrypt(user.getPassword()).equals(txtPassword.getText())) {
+           if (user.getPassword().equals(txtPassword.getText())) {
                Stage stage = new Stage();
                stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/dashBoard.fxml"))));
                stage.show();

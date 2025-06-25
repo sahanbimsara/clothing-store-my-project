@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.DashBoardFormController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#4c6262" height="400.0" layoutX="-2.0" stroke="BLACK" strokeType="INSIDE" width="170.0" />
-      <Label layoutX="42.0" layoutY="27.0" style="-fx-background-color: #FF5733;" text="Hello world" textFill="WHITE">
+      <Label layoutX="42.0" layoutY="27.0" style="-fx-background-color: #FF5733;" text="DashBoard" textFill="WHITE">
          <font>
             <Font size="24.0" />
          </font>
@@ -20,27 +20,27 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Label>
-      <Button layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnTest" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Reg Form" />
-      <Button layoutX="25.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnlog" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="log" />
-      <Button layoutX="25.0" layoutY="88.0" mnemonicParsing="false" onAction="#btnDashBoardOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="DashBoard" />
-      <Button layoutX="25.0" layoutY="231.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Button" />
+      <Button layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="User Register" />
+      <Button layoutX="25.0" layoutY="225.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Customer Details" />
+      <Button layoutX="25.0" layoutY="93.0" mnemonicParsing="false" onAction="#btnOrderOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Place Order" />
       <AnchorPane fx:id="loadPane" layoutX="164.0" layoutY="3.0" prefHeight="394.0" prefWidth="600.0" />
-      <ImageView fitHeight="22.0" fitWidth="38.0" layoutX="31.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/icons8-dashboard-48.png" />
-         </image>
-      </ImageView>
       <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="31.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-user-50.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="22.0" fitWidth="22.0" layoutX="31.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../img/icons8-login-50.png" />
-         </image>
-      </ImageView>
       <Label fx:id="lblDate" layoutX="17.0" layoutY="300.0" prefHeight="17.0" prefWidth="115.0" text="Date - dd : mm : yyyy" />
       <Label fx:id="lblTime" layoutX="17.0" layoutY="337.0" prefHeight="17.0" prefWidth="115.0" text="Time -  00: 00 : 00 " />
+      <ImageView fitHeight="22.0" fitWidth="38.0" layoutX="14.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-dashboard-48.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="31.0" layoutY="232.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/icons8-user-50.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="25.0" layoutY="139.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Items" />
    </children>
 </AnchorPane>

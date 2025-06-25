@@ -39,7 +39,7 @@ public class DashBoardFormController implements Initializable {
     }
 
     @FXML
-    void btnTest(ActionEvent event) throws IOException {
+    void btnRegisterOnAction(ActionEvent event) throws IOException {
         URL recource = this.getClass().getResource("/view/registerForm.fxml");
 
         assert recource != null;
@@ -50,22 +50,9 @@ public class DashBoardFormController implements Initializable {
         loadPane.getChildren().add(load);
 
     }
-        @FXML
-        void btnlog(ActionEvent event) throws IOException {
-
-            URL recource = this.getClass().getResource("/view/loginForm.fxml");
-
-            assert recource != null;
-
-            Parent load = FXMLLoader.load(recource);
-
-            loadPane.getChildren().clear();
-            loadPane.getChildren().add(load);
-
-        }
 
 
-    public void btnDashBoardOnAction(ActionEvent actionEvent) throws IOException {
+    public void btnCustomerOnAction(ActionEvent actionEvent) throws IOException {
 
         URL recource = this.getClass().getResource("/view/customerDetails.fxml");
 
@@ -100,7 +87,13 @@ public class DashBoardFormController implements Initializable {
     }
 
 
-    public void btnViewOnAction(ActionEvent actionEvent) {
+    public void btnOrderOnAction(ActionEvent actionEvent) {
 
+
+
+
+    }
+
+    public void btnViewOnAction(ActionEvent actionEvent) {
     }
 }
