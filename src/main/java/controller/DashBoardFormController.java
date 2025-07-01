@@ -87,7 +87,15 @@ public class DashBoardFormController implements Initializable {
     }
 
 
-    public void btnOrderOnAction(ActionEvent actionEvent) {
+    public void btnOrderOnAction(ActionEvent actionEvent) throws IOException {
+        URL recource = this.getClass().getResource("/view/orderForm.fxml");
+
+        assert recource != null;
+
+        Parent load = FXMLLoader.load(recource);
+
+        loadPane.getChildren().clear();
+        loadPane.getChildren().add(load);
 
 
 
