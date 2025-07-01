@@ -9,28 +9,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="394.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+<AnchorPane prefHeight="394.0" prefWidth="600.0" stylesheets="@../css/loginStyles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
    <children>
       <Label layoutX="395.0" layoutY="33.0">
          <font>
             <Font name="System Bold Italic" size="36.0" />
          </font>
       </Label>
-      <TextField fx:id="txtUserName" layoutX="375.0" layoutY="143.0" prefHeight="38.0" prefWidth="162.0" promptText="username" />
-      <TextField fx:id="txtPassword" layoutX="375.0" layoutY="196.0" prefHeight="38.0" prefWidth="162.0" promptText="password" />
-      <Button layoutX="434.0" layoutY="300.0" mnemonicParsing="false" onAction="#btnLoginOnAction" text="Login" />
-      <Hyperlink layoutX="368.0" layoutY="257.0" onAction="#hyperRegisterOnAction" text="are you new user ? register now" />
-      <ImageView fitHeight="403.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="true">
+      <TextField fx:id="txtUserName" layoutX="356.0" layoutY="145.0" prefHeight="38.0" prefWidth="162.0" promptText="username" stylesheets="@../css/loginStyles.css" />
+      <TextField fx:id="txtPassword" layoutX="356.0" layoutY="202.0" prefHeight="38.0" prefWidth="162.0" promptText="password" stylesheets="@../css/loginStyles.css" />
+      <Button layoutX="402.0" layoutY="299.0" mnemonicParsing="false" onAction="#btnLoginOnAction" prefHeight="25.0" prefWidth="58.0" style="-fx-background-color: #008CBA;" stylesheets="@../css/loginStyles.css" text="𝐋𝐨𝐠𝐢𝐧" />
+      <Hyperlink layoutX="356.0" layoutY="256.0" onAction="#hyperRegisterOnAction" stylesheets="@../css/loginStyles.css" text="are you new user ? register now" />
+      <ImageView fitHeight="403.0" fitWidth="277.0" pickOnBounds="true" preserveRatio="true" styleClass="anchor-pane">
          <image>
             <Image url="@../img/mintosko-Ro0PNXcpCus-unsplash.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="61.0" prefHeight="78.0" prefWidth="176.0" text="Clothify Store" textFill="WHITE">
+      <Label layoutX="61.0" prefHeight="78.0" prefWidth="176.0" stylesheets="@../css/loginStyles.css" text="Clothify Store" textFill="WHITE">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="416.0" layoutY="30.0" text="Login " />
-      <Label layoutX="407.0" layoutY="69.0" text="Employee" />
+      <Label layoutX="412.0" layoutY="78.0" prefHeight="38.0" prefWidth="83.0" stylesheets="@../css/loginStyles.css" text="𝐋𝐨𝐠𝐢𝐧" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font></Label>
+      <Label layoutX="395.0" layoutY="109.0" text="𝐄𝐦𝐩𝐥𝐨𝐲𝐞𝐞">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <ImageView fitHeight="67.0" fitWidth="91.0" layoutX="403.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/person_logo.png" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

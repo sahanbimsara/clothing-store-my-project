@@ -1,0 +1,64 @@
+/* Root AnchorPane background */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to right, #f0f2f5, #d9e2ec);
+    -fx-padding: 20;
+}
+
+/* Text fields */
+.text-field {
+    -fx-background-radius: 10;
+    -fx-border-radius: 10;
+    -fx-border-color: #cccccc;
+    -fx-background-color: #ffffff;
+    -fx-font-size: 14px;
+    -fx-padding: 10 12;
+}
+
+.text-field:focused {
+    -fx-border-color: #007bff;
+    -fx-effect: dropshadow(gaussian, #007bff, 5, 0.1, 0, 0);
+}
+
+/* Login button */
+.button {
+    -fx-background-color: linear-gradient(to right, #007bff, #0056b3);
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #0056b3, #004080);
+}
+
+/* Hyperlink */
+.hyperlink {
+    -fx-text-fill: #007bff;
+    -fx-underline: false;
+    -fx-font-size: 11px;
+}
+
+.hyperlink:hover {
+    -fx-underline: true;
+}
+
+/* Title labels */
+.label {
+    -fx-font-family: "Poppins", sans-serif;
+}
+
+.label-title {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, black, 4, 0.4, 1, 1);
+}
+
+/* Login form title text */
+.label-header {
+    -fx-text-fill: #212529;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}

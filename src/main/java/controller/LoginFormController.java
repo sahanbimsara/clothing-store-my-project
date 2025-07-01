@@ -6,7 +6,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import model.User;
 import org.jasypt.util.text.BasicTextEncryptor;
@@ -23,6 +27,9 @@ public class LoginFormController {
 
     @FXML
     private TextField txtUserName;
+
+
+
 
     //Navigate user to dashboard after filling username and passowrd
 
