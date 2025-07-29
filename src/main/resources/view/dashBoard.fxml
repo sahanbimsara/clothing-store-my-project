@@ -23,7 +23,14 @@
       <Button layoutX="25.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnRegisterOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="User Register" />
       <Button layoutX="25.0" layoutY="225.0" mnemonicParsing="false" onAction="#btnCustomerOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Customer Details" />
       <Button layoutX="25.0" layoutY="93.0" mnemonicParsing="false" onAction="#btnOrderOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Place Order" />
-      <AnchorPane fx:id="loadPane" layoutX="180.0" prefHeight="459.0" prefWidth="421.0" />
+      <AnchorPane fx:id="loadPane" layoutX="180.0" prefHeight="459.0" prefWidth="421.0">
+         <children>
+            <ImageView fitHeight="437.0" fitWidth="414.0" layoutX="4.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/4.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
       <ImageView fitHeight="35.0" fitWidth="22.0" layoutX="31.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../img/icons8-user-50.png" />
@@ -41,6 +48,6 @@
             <Image url="@../img/icons8-user-50.png" />
          </image>
       </ImageView>
-      <Button layoutX="25.0" layoutY="138.0" mnemonicParsing="false" onAction="#btnViewOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Items" />
+      <Button layoutX="25.0" layoutY="138.0" mnemonicParsing="false" onAction="#btnItemsOnAction" prefHeight="35.0" prefWidth="143.0" stylesheets="@../css/style.css" text="Items" />
    </children>
 </AnchorPane>

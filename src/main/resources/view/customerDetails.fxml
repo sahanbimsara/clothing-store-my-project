@@ -5,36 +5,46 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="419.0" prefWidth="604.0" style="-fx-background-color: #2ecc71;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormConroller">
+<AnchorPane prefHeight="419.0" prefWidth="604.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomerFormConroller">
    <children>
       <Label layoutX="311.0" layoutY="152.0">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="208.0" layoutY="187.0" mnemonicParsing="false" onAction="#btnAddOnAction" text="Add" />
-      <TextField fx:id="txtName" layoutX="24.0" layoutY="107.0" promptText="Customer Name" />
-      <TextField fx:id="txtAddress" layoutX="24.0" layoutY="145.0" promptText="Customer Address" />
-      <TextField fx:id="txtPhone" layoutX="24.0" layoutY="187.0" promptText="Customer Phone" />
-      <TableView fx:id="txtTable" layoutX="52.0" layoutY="230.0" prefHeight="142.0" prefWidth="518.0">
-        <columns>
-          <TableColumn fx:id="colID" prefWidth="121.33331298828125" text="ID" />
-          <TableColumn fx:id="colName" prefWidth="144.6666259765625" text="Name" />
-            <TableColumn fx:id="colAddress" prefWidth="120.66668701171875" text="Address" />
-            <TableColumn fx:id="colPhone" prefWidth="129.33334350585938" text="Phone" />
-        </columns>
-      </TableView>
-      <Button layoutX="487.0" layoutY="379.0" mnemonicParsing="false" onAction="#btnReloadOnAction" text="Reload" />
-      <TextField fx:id="txtId" layoutX="24.0" layoutY="69.0" promptText="Customer ID" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="35.0" layoutX="-3.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="607.0" />
       <Label layoutX="190.0" layoutY="15.0" text="Customer Deatils">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
+      <ImageView fitHeight="35.0" fitWidth="43.0" layoutX="410.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cusCare.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="218.0" layoutY="197.0" mnemonicParsing="false" onAction="#btnAddOnAction" text="Add" />
+      <TextField fx:id="txtName" layoutX="34.0" layoutY="117.0" promptText="Customer Name" />
+      <TextField fx:id="txtAddress" layoutX="34.0" layoutY="155.0" promptText="Customer Address" />
+      <TextField fx:id="txtPhone" layoutX="34.0" layoutY="197.0" promptText="Customer Phone" />
+      <TableView fx:id="txtTable" layoutX="62.0" layoutY="240.0" prefHeight="142.0" prefWidth="518.0">
+         <columns>
+            <TableColumn fx:id="colID" prefWidth="121.33331298828125" text="ID" />
+            <TableColumn fx:id="colName" prefWidth="144.6666259765625" text="Name" />
+            <TableColumn fx:id="colAddress" prefWidth="120.66668701171875" text="Address" />
+            <TableColumn fx:id="colPhone" prefWidth="129.33334350585938" text="Phone" />
+         </columns>
+      </TableView>
+      <Button layoutX="497.0" layoutY="389.0" mnemonicParsing="false" onAction="#btnReloadOnAction" text="Reload" />
+      <TextField fx:id="txtId" layoutX="34.0" layoutY="79.0" promptText="Customer ID" />
+      <ImageView fitHeight="99.0" fitWidth="149.0" layoutX="330.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/cus-details-02.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
