@@ -46,5 +46,6 @@
             <Image url="@../img/cus-details-02.jpg" />
          </image>
       </ImageView>
+      <Button layoutX="267.0" layoutY="197.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" text="Delete" />
    </children>
 </AnchorPane>

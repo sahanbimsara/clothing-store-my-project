@@ -140,4 +140,7 @@ public class CustomerFormConroller  implements Initializable {
     }
 
 
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+
+    }
 }
