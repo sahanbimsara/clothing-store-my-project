@@ -5,7 +5,10 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import util.CrudUtil;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -87,10 +90,37 @@ public class OrderFormController {
         // Load sample data
         loadCustomers();
         loadItems();
+
+        cmbCustomerID.setOnAction(event ->{
+            String selectedId = cmbCustomerID.getValue();
+            loadCustomerDetails(selectedId);
+        });
     }
 
     private void loadCustomers() {
-        cmbCustomerID.setItems(FXCollections.observableArrayList("C001", "C002", "C003"));
+        ObservableList<String> customerIds = FXCollections.observableArrayList();
+
+        try {
+            ResultSet resultSet = CrudUtil.execute("SELECT id FROM Customers");
+
+            while (resultSet.next()){
+                customerIds.add(resultSet.getString("id"));
+            }
+            cmbCustomerID.setItems(customerIds);
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    private void loadCustomerDetails(String id){
+        try {
+            ResultSet rs = CrudUtil.execute("SELECT name, address FROM Customers WHERE id=?", id);
+            if (rs.next()){
+                txtCusomerName.setText(rs.getString("name"));
+                txtAddress.setText(rs.getString("address"));
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void loadItems() {

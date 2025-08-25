@@ -7,21 +7,22 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
+<AnchorPane prefHeight="458.0" prefWidth="600.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderFormController">
    <children>
-      <Label fx:id="NetTotal" layoutX="21.0" layoutY="366.0" prefHeight="17.0" prefWidth="102.0" stylesheets="@../css/orderForm.css" text="Net Total : " />
-      <ComboBox fx:id="cmbCustomerID" layoutX="14.0" layoutY="89.0" prefWidth="150.0" promptText="CusomerID" stylesheets="@../css/orderForm.css" />
-      <ComboBox fx:id="cmbItemCode" layoutX="14.0" layoutY="136.0" prefWidth="150.0" promptText="ItemCode" stylesheets="@../css/orderForm.css" />
-      <TextField fx:id="txtCusomerName" layoutX="187.0" layoutY="89.0" promptText="Customer Name" stylesheets="@../css/orderForm.css" />
-      <TextField fx:id="txtDescription" layoutX="187.0" layoutY="136.0" promptText="Description" stylesheets="@../css/orderForm.css" />
-      <TextField fx:id="txtStock" layoutX="365.0" layoutY="136.0" prefHeight="34.0" prefWidth="61.0" promptText="Stock" stylesheets="@../css/orderForm.css" />
-      <TextField fx:id="txtAddress" layoutX="365.0" layoutY="89.0" promptText="Address" stylesheets="@../css/orderForm.css" />
-      <TextField fx:id="txtOrderId" layoutX="440.0" layoutY="52.0" prefHeight="25.0" prefWidth="75.0" promptText="OrderID" stylesheets="@../css/orderForm.css" />
-      <TextField fx:id="txtQty" layoutX="365.0" layoutY="183.0" prefHeight="34.0" prefWidth="55.0" promptText="QTY" stylesheets="@../css/orderForm.css" />
-      <Button layoutX="449.0" layoutY="183.0" mnemonicParsing="false" onAction="#btnAddOnAction" stylesheets="@../css/orderForm.css" text="Add to cart" />
-      <TableView fx:id="tblOrder" layoutX="55.0" layoutY="224.0" prefHeight="132.0" prefWidth="525.0" stylesheets="@../css/orderForm.css">
+      <Label fx:id="NetTotal" layoutX="21.0" layoutY="415.0" prefHeight="17.0" prefWidth="102.0" stylesheets="@../css/orderForm.css" text="Net Total : " />
+      <ComboBox fx:id="cmbCustomerID" layoutX="14.0" layoutY="118.0" prefWidth="150.0" promptText="CusomerID" stylesheets="@../css/orderForm.css" />
+      <ComboBox fx:id="cmbItemCode" layoutX="14.0" layoutY="165.0" prefWidth="150.0" promptText="ItemCode" stylesheets="@../css/orderForm.css" />
+      <TextField fx:id="txtCusomerName" disable="true" layoutX="187.0" layoutY="119.0" promptText="Customer Name" stylesheets="@../css/orderForm.css" />
+      <TextField fx:id="txtDescription" disable="true" layoutX="187.0" layoutY="166.0" promptText="Description" stylesheets="@../css/orderForm.css" />
+      <TextField fx:id="txtStock" disable="true" layoutX="365.0" layoutY="213.0" prefHeight="34.0" prefWidth="61.0" promptText="Stock" stylesheets="@../css/orderForm.css" />
+      <TextField fx:id="txtAddress" disable="true" layoutX="365.0" layoutY="119.0" promptText="Address" stylesheets="@../css/orderForm.css" />
+      <TextField fx:id="txtOrderId" disable="true" layoutX="440.0" layoutY="82.0" prefHeight="25.0" prefWidth="75.0" promptText="OrderID" stylesheets="@../css/orderForm.css" />
+      <TextField fx:id="txtQty" layoutX="472.0" layoutY="169.0" prefHeight="34.0" prefWidth="55.0" promptText="QTY" stylesheets="@../css/orderForm.css" />
+      <Button layoutX="449.0" layoutY="213.0" mnemonicParsing="false" onAction="#btnAddOnAction" stylesheets="@../css/orderForm.css" text="Add to cart" />
+      <TableView fx:id="tblOrder" layoutX="37.0" layoutY="263.0" prefHeight="146.0" prefWidth="525.0" stylesheets="@../css/orderForm.css">
         <columns>
           <TableColumn fx:id="colItemCode" prefWidth="84.0" text="ItemCode" />
           <TableColumn fx:id="ColDes" prefWidth="91.33334350585938" text="Description" />
@@ -30,10 +31,17 @@
             <TableColumn fx:id="colTotal" prefWidth="142.0" text="Total" />
         </columns>
       </TableView>
-      <Label layoutX="217.0" layoutY="22.0" stylesheets="@../css/orderForm.css" text="Order Form" />
-      <Button layoutX="506.0" layoutY="362.0" mnemonicParsing="false" onAction="#btnPlaceOrder" stylesheets="@../css/orderForm.css" text="Place order" />
-      <TextField fx:id="txtUnitPrice" layoutX="440.0" layoutY="136.0" prefHeight="34.0" prefWidth="87.0" promptText="Unit Price" stylesheets="@../css/orderForm.css" />
-      <Label fx:id="Date" layoutX="41.0" layoutY="43.0" stylesheets="@../css/orderForm.css" text="Date :" />
-      <Label fx:id="Time" layoutX="39.0" layoutY="60.0" stylesheets="@../css/orderForm.css" text="Time :" />
+      <Label layoutX="225.0" layoutY="21.0" stylesheets="@../css/orderForm.css" text="Order Form" />
+      <Button layoutX="506.0" layoutY="415.0" mnemonicParsing="false" onAction="#btnPlaceOrder" prefHeight="27.0" prefWidth="87.0" stylesheets="@../css/orderForm.css" text="Place order" />
+      <TextField fx:id="txtUnitPrice" disable="true" layoutX="367.0" layoutY="166.0" prefHeight="34.0" prefWidth="87.0" promptText="Unit Price" stylesheets="@../css/orderForm.css" />
+      <Label fx:id="Date" layoutX="41.0" layoutY="72.0" stylesheets="@../css/orderForm.css" text="Date :" />
+      <Label fx:id="Time" layoutX="39.0" layoutY="89.0" stylesheets="@../css/orderForm.css" text="Time :" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="66.0" stroke="BLACK" strokeType="INSIDE" width="600.0" />
+      <Label layoutX="234.0" layoutY="12.0" prefHeight="35.0" prefWidth="150.0" text="Place Order">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button layoutX="411.0" layoutY="415.0" mnemonicParsing="false" onAction="#btnPlaceOrder" prefHeight="34.0" prefWidth="75.0" stylesheets="@../css/orderForm.css" text="Delete" />
    </children>
 </AnchorPane>
