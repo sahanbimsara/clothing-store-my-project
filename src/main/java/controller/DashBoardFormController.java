@@ -104,4 +104,9 @@ public class DashBoardFormController implements Initializable {
 
     public void btnItemsOnAction(ActionEvent actionEvent) {
     }
+
+    public void btnStockOnAction(ActionEvent actionEvent) {
+
+
+    }
 }
